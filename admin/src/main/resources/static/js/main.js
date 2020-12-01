@@ -92,7 +92,7 @@ layui.use(['element', 'form', 'layer', 'upload'], function () {
     });
 
     /* AJAX请求默认选项，处理连接超时问题 */
-    $.ajaxSetup({
+    /*$.ajaxSetup({
         beforeSend: function () {
             layer.load(0);
         },
@@ -108,7 +108,7 @@ layui.use(['element', 'form', 'layer', 'upload'], function () {
                 });
             }
         }
-    });
+    });*/
 
     /*  漂浮消息 */
     $.fn.Messager = function (result) {
@@ -133,6 +133,7 @@ layui.use(['element', 'form', 'layer', 'upload'], function () {
     /* 提交表单数据 */
     $(document).on("click", ".ajax-submit", function (e) {
         e.preventDefault();
+        debugger
         var form = $(this).parents("form");
         var url = form.attr("action");
         var serializeArray = form.serializeArray();

@@ -20,6 +20,6 @@ public class UserValid implements Serializable {
     @Size(min = 2, message = "用户昵称：请输入至少2个字符")
     private String nickname;
     private String confirm;
-    @NotNull(message = "所在部门不能为空")
-    private Dept dept;
+//    @NotNull(message = "所在部门不能为空")
+//    private Dept dept;
 }

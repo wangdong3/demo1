@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:mo="https://gitee.com/aun/Timo">
+<html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
     <link rel="stylesheet" th:href="@{/lib/zTree_v3/css/zTreeStyle/zTreeStyle.css}" type="text/css">
 </head>
 <body>
 <div class="layui-form timo-compile">
-    <form th:action="@{/system/user/save}">
+    <form th:action="@{/visitor/register}">
         <input type="hidden" name="id" th:if="${user}" th:value="${user.id}"/>
         <div class="layui-form-item">
             <label class="layui-form-label required">用户名</label>

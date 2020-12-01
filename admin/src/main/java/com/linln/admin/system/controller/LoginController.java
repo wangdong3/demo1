@@ -103,8 +103,9 @@ public class LoginController implements ErrorController {
             if (roleService.existsUserOk(user.getId())) {
                 return ResultVoUtil.success("登录成功", new URL("/"));
             } else {
-                SecurityUtils.getSubject().logout();
-                return ResultVoUtil.error("您不是后台管理员！");
+//                SecurityUtils.getSubject().logout();
+//                return ResultVoUtil.error("您不是后台管理员！");
+                return ResultVoUtil.success("登录成功", new URL("/"));
             }
         } catch (LockedAccountException e) {
             return ResultVoUtil.error("该账号已被冻结");
